@@ -8,7 +8,7 @@ export function parseSentence(words) {
 	return sentence.trim();
 }
 
-const usage = "\nUsage: tran <lang_name> sentence to be translated";
+const usage = chalk.hex('#83aaff')("\\nUsage: tran <lang\_name> sentence to be translated");
 export function showHelp() {
 	console.log(usage);
 	console.log("\nOptions:\r");
@@ -25,10 +25,10 @@ export function showHelp() {
 	console.log("\t--help\t\t      " + "Show help." + "\t\t\t" + "[boolean]\n");
 }
 
-export function showAll() {
-    console.log(chalk.magenta.bold("\nLanguage Name\t\tISO-639-1 Code\n"));
-    for (let [key, value] of languages) {
-        console.log(key + "\t\t" + value + "\n");
+export function showAll(){
+    console.log(chalk.magenta.bold("\nLanguage Name\t\tISO-639-1 Code\n"))
+    for(let [key, value] of languages) {
+	console.log(key + "\t\t" + value + "\n")
     }
 }
 let languages = new Map();
@@ -141,14 +141,15 @@ languages.set("yiddish", "yi");
 languages.set("yoruba", "yo");
 languages.set("zulu", "zu");
 
-export function parseLanguage(language) {
-	if (language.length == 2) {
-		return language;
-	}
-	if (languages.has(language)) {
-		return languages.get(language);
-	} else {
-		console.error("Language not supported!");
-		return; //returning null if the language is unsupported.
-	}
-}
+export function parseLanguage (language) {
+    if(language.length == 2){
+	return language;
+    }
+    if(languages.has(language)){
+	return languages.get(language)
+    }
+    else {
+	console.error(chalk.red.bold("Language not supported!"))
+	return; //returning null if the language is unsupported.
+    }
+};
