@@ -58,6 +58,8 @@ tran -l
 
 ## Demo Video
 
+[If Video not visible, Click Here](./assets/videos/20240722-0922-51.2006360.mp4)
+
 <video src="./assets/videos/20240722-0922-51.2006360.mp4" alt="Demo Video" controls></video>
 
 ## License
