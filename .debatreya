@@ -1,0 +1,22 @@
+{
+  "id": "tran-CLI",
+  "name": "tran-CLI",
+  "tagline": "A CLI tool to translate text into any language using Google Translate API",
+  "description": "`tran` is a command-line tool to translate sentences from English to various languages using the Google Translate API. It provides a simple interface to translate text and list supported languages.",
+  "techStack": [
+    "JavaScript",
+    "Node.js",
+    "Google Translate API",
+    "yargs",
+    "chalk",
+    "boxen",
+    "axios"
+  ],
+  "links": {
+    "github": "https://github.com/Debatreya/tran-CLI",
+    "demo": ""
+  },
+  "featured": true,
+  "priority": 30,
+  "hasDeepDive": false
+}
